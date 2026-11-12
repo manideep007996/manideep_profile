@@ -38,7 +38,7 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
             aria-hidden="true"
             className="grid h-[30px] w-[30px] place-items-center rounded-lg border border-line bg-sand-soft text-[0.72rem] font-semibold text-sand"
           >
-            MS
+            GM
           </span>
           <span className="text-[0.97rem] font-semibold tracking-tight">{profile.displayName}</span>
           <span className="ml-[10px] hidden border-l border-line pl-[10px] text-[0.82rem] text-muted lg:inline">
