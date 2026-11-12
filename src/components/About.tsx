@@ -4,7 +4,7 @@ import Section from './Section';
 
 export default function About() {
   return (
-    <Section id="about" title="About">
+    <Section id="about" title="A bit about me">
       <div className="grid gap-10 min-[900px]:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] min-[900px]:gap-16">
         <div className="space-y-[18px]">
           {aboutParagraphs.map((para) => (
@@ -14,14 +14,11 @@ export default function About() {
           ))}
         </div>
 
-        <dl className="self-start overflow-hidden rounded-[14px] border border-line">
+        <dl className="grad-border grid self-start gap-[2px] rounded-2xl p-2 shadow-card sm:grid-cols-2 min-[900px]:grid-cols-1">
           {aboutFacts.map((fact) => (
-            <div
-              key={fact.term}
-              className="flex justify-between gap-4 border-b border-line-2 px-4 py-[14px] text-[0.9rem] last:border-b-0"
-            >
-              <dt className="text-muted">{fact.term}</dt>
-              <dd className="text-right font-medium">{fact.value}</dd>
+            <div key={fact.term} className="rounded-xl px-4 py-3 transition hover:bg-surface-2">
+              <dt className="font-mono text-[0.72rem] uppercase tracking-[0.12em] text-sand">{fact.term}</dt>
+              <dd className="mt-1 text-[0.93rem] font-medium">{fact.value}</dd>
             </div>
           ))}
         </dl>

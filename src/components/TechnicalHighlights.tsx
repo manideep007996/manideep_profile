@@ -8,13 +8,13 @@ export default function TechnicalHighlights() {
       title="Engineering highlights"
       lede="The problems I have solved, rather than a list of logos."
     >
-      <div className="grid gap-px overflow-hidden rounded-2xl border border-line-2 bg-line-2 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {highlights.map(({ icon: Icon, title, body }) => (
-          <article key={title} className="bg-surface p-[22px] transition-colors hover:bg-surface-2">
-            <h3 className="mb-[9px] flex items-center gap-[10px] text-[0.98rem]">
-              <Icon size={18} className="shrink-0 text-sand" aria-hidden="true" />
-              {title}
-            </h3>
+          <article key={title} className="card card-hover p-[22px]">
+            <span className="icon-tile mb-4" aria-hidden="true">
+              <Icon size={18} />
+            </span>
+            <h3 className="mb-2 text-[1rem] font-bold">{title}</h3>
             <p className="text-[0.88rem] leading-relaxed text-muted">{body}</p>
           </article>
         ))}

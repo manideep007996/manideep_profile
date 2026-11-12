@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
 export type Theme = 'dark' | 'light';
-const STORAGE_KEY = 'msn-theme';
+const STORAGE_KEY = 'gm-theme';
 
 function readStoredTheme(): Theme {
   try {
@@ -19,7 +19,7 @@ export function useTheme() {
     document.documentElement.classList.toggle('dark', theme === 'dark');
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute('content', theme === 'dark' ? '#0C1014' : '#F3F5F7');
+      ?.setAttribute('content', theme === 'dark' ? '#08080F' : '#F6F6FB');
     try {
       localStorage.setItem(STORAGE_KEY, theme);
     } catch {

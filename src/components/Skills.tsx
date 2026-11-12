@@ -20,7 +20,7 @@ export default function Skills() {
               onClick={() => setFilter(group.id)}
               className={`rounded-full border px-[14px] py-2 text-[0.85rem] transition ${
                 pressed
-                  ? 'border-sand bg-sand font-semibold text-sand-ink'
+                  ? 'grad-bg border-transparent font-semibold text-white dark:text-[#0c0818]'
                   : 'border-line text-ink-2 hover:border-sand hover:text-ink'
               }`}
             >
@@ -34,9 +34,11 @@ export default function Skills() {
         {visible.map((group) => {
           const Icon = group.icon;
           return (
-            <article key={group.id} className="rounded-[14px] border border-line bg-surface p-[18px]">
-              <h3 className="mb-[14px] flex items-center gap-[9px] text-[0.95rem]">
-                <Icon size={17} className="text-sand" aria-hidden="true" />
+            <article key={group.id} className="card card-hover p-5">
+              <h3 className="mb-4 flex items-center gap-3 text-[0.98rem] font-bold">
+                <span className="icon-tile" aria-hidden="true">
+                  <Icon size={18} />
+                </span>
                 {group.name}
               </h3>
               <ChipList items={group.items} primary={group.primary} />
